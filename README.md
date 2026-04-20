@@ -195,19 +195,7 @@ src/
 
 ---
 
-## 📸 Screenshots
 
-> *Add screenshots here after deployment*
-
-| Screen | Preview |
-|--------|---------|
-| Login Page | *screenshot* |
-| Dashboard | *screenshot* |
-| Collection View | *screenshot* |
-| Shared View | *screenshot* |
-| History Panel | *screenshot* |
-
----
 
 ## 📄 License
 
