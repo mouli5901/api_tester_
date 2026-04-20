@@ -1,0 +1,176 @@
+/* ============================================================
+   SharedView — Read-only Collection View Styles
+   ============================================================ */
+
+.shared-view {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--color-bg-primary);
+}
+
+/* Banner */
+.shared-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  padding: 10px var(--spacing-lg);
+  background-color: var(--color-accent);
+  color: #fff;
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  text-align: center;
+}
+
+.shared-banner a {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: var(--font-bold);
+}
+
+.shared-banner a:hover {
+  opacity: 0.85;
+}
+
+/* Layout body */
+.shared-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Sidebar reusing cv-sidebar styles with readonly tweaks */
+.shared-sidebar {
+  width: 260px;
+  min-width: 260px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg-secondary);
+  border-right: 1px solid var(--color-border);
+  overflow-y: auto;
+}
+
+.shared-sidebar-header {
+  padding: var(--spacing-md);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.shared-collection-name {
+  font-size: var(--text-md);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.shared-readonly-badge {
+  display: inline-block;
+  font-size: var(--text-xs);
+  color: var(--color-text-hint);
+  background-color: var(--color-bg-tertiary);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+}
+
+.shared-request-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--spacing-sm) 0;
+}
+
+.shared-request-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: 10px var(--spacing-md);
+  cursor: pointer;
+  border-left: 3px solid transparent;
+  transition: all var(--transition-fast);
+}
+
+.shared-request-item:hover {
+  background-color: var(--color-bg-tertiary);
+}
+
+.shared-request-item.active {
+  border-left-color: var(--color-accent);
+  background-color: var(--color-accent-subtle);
+}
+
+.shared-main {
+  flex: 1;
+  overflow-y: auto;
+  min-width: 0;
+}
+
+/* 404 page */
+.shared-404 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: var(--spacing-2xl);
+}
+
+.shared-404-code {
+  font-size: 6rem;
+  font-weight: var(--font-bold);
+  color: var(--color-text-hint);
+  line-height: 1;
+  margin-bottom: var(--spacing-md);
+  opacity: 0.3;
+}
+
+.shared-404 h2 {
+  font-size: var(--text-xl);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.shared-404 p {
+  color: var(--color-text-hint);
+  font-size: var(--text-sm);
+  margin-bottom: var(--spacing-xl);
+}
+
+.shared-404 a {
+  padding: 10px 24px;
+  background-color: var(--color-accent);
+  color: #fff;
+  border-radius: var(--radius-md);
+  font-weight: var(--font-medium);
+  font-size: var(--text-sm);
+  transition: background var(--transition-fast);
+  display: inline-block;
+}
+
+.shared-404 a:hover {
+  background-color: var(--color-accent-hover);
+}
+
+/* Loading */
+.shared-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .shared-body {
+    flex-direction: column;
+  }
+
+  .shared-sidebar {
+    width: 100%;
+    min-width: 100%;
+    height: auto;
+    max-height: 35vh;
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+  }
+}
