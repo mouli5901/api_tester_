@@ -79,7 +79,10 @@ export default function CollectionView() {
   const handleNewRequest = () => {
     setActiveRequest(null)
   }
-
+// new request is just empty editor, activeRequest null means new request. 
+// when user clicks on existing request, activeRequest is set to that request, editor shows that request data. 
+// when user saves, if activeRequest has id, we update, else we create new. after delete, 
+// if deleted request was active, we set activeRequest to null so editor goes back to new request state.
   const handleSelectRequest = (req) => {
     setActiveRequest(req)
   }
